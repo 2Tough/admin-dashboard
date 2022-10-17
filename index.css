@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    
+}
+
+.bar {
+    display: grid;
+    grid-template-columns: 2em 1fr 2fr 1fr 2em;
+    grid-template-rows: 1.5em 2em 1fr 1fr 2em;
+    background: pink;
+    
+}
+
+input {
+    grid-column: 3 / -3;
+    grid-row: 2 / 3
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.bar > p, .bar > h2 {
+    grid-column: 3 / -2;
+    
+}
+
+.bar > p {
+    grid-row: 3 / 4
+}
+
+.bar > h2 {
+    grid-row: 4 / 5
+}
+
+.bar-buttons {
+    grid-column: 3 / -1;
+    display: grid;
+    grid-template-columns: 1.5em 1fr 1em 1fr 1em 1fr 1.5em;
+    grid-template-rows: 2em 1fr 2em;
+    
+}
+
+.left-bar-icons {
+    grid-column: 3 / -1;
+    grid-template-rows: 3 / 4;
+}
