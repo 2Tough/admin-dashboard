@@ -55,13 +55,76 @@ input {
 .bar-buttons {
     
     display: grid;
-    grid-template-columns: 1.5em 1fr 1em 1fr 1em 1fr 1.5em;
-    grid-template-rows: 2em 1fr 2em;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-areas: 
+        "left-side right-side"
+        "left-side right-side"
+        "left-side right-side";
+        
     
 }
 
 .left-bar-icons {
-    grid-column: 3 / -1;
-    grid-template-rows: 3 / 4;
+    grid-column: 1 / -1;
+    grid-row: 1;
+    grid-area: "left-bar-icons";
+    align-items: center;
+    
+    display: grid;
+    grid-template-areas: 
+        "left middle right";
+    
+}
+
+.bar-left-bell {
+    grid-area: "left"
+}
+
+.bar-left-profile-pic {
+    grid-area: "center"
+}
+
+.bar-left-title {
+    grid-area: "right"
+}
+
+
+.left-bar-buttons {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-row: 2 ;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    grid-area: "right-bar-icons";
+    grid-template-areas: 
+        "left middle right";;
+    
+    
+}
+
+.Btns-1 {
+    grid-area: "left"
+    
+}
+
+.Btns-2 {
+    grid-area: "center"
+
+    
+}
+
+.Btns-3 {
+    grid-area: "right"
+    
+}
+
+img {
+    width: 10%;
+}
+
+.bar-left-profile-pic {
+    border-radius: 50%;
 }
 
