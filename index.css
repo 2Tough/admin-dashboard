@@ -25,7 +25,7 @@ img {
 
 ul > li {
     list-style: none;
-    border-bottom: hsl(317 100% 54%) 2px solid;
+    
 }
 
 
@@ -49,9 +49,10 @@ p, h2, .sidebar-right-title {
 
 /* Decoration */ 
 
-.header {
+.header, .announcements-container, .trending-container {
     background-color: #120320;
     box-shadow: 0 4px 2px -2px #e879f9;
+    border-radius: 5px;
 }
 
 /* Grids */
@@ -59,12 +60,12 @@ p, h2, .sidebar-right-title {
 .container {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 0.5fr 2fr;
     grid-template-areas:
     
     "sidebar header header"
     "sidebar content content"
-    "sidebar content content";
+   ;
 }
 
 /* Header */
@@ -87,6 +88,8 @@ p, h2, .sidebar-right-title {
     grid-area: search;
     display: grid;
     grid-template-columns: 1fr 8fr;
+
+    color: black;
     
     grid-template-areas:
     "searchIcon searchBar"
@@ -95,6 +98,7 @@ p, h2, .sidebar-right-title {
 .search-bar > input {
     grid-area: searchBar;
     
+    color: black;
     align-self: center;
     height: 3em;
     width: 85%;
@@ -115,6 +119,8 @@ p, h2, .sidebar-right-title {
 
     animation: pulsate 0.11s ease-in-out infinite alternate; 
 }
+
+
 
 .search-bar-img {
     grid-area: searchIcon;
@@ -208,47 +214,83 @@ button {
 .Btns-1,
 .Btns-2,
 .Btns-3 {
-
+    margin-right:1em
 }
 
 /* Sidebar */
 
 
 .sidebar {
-    align-self: start;
+    grid-area: sidebar;
+    
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar > div {
+    padding-left: 0;
+    
 }
 .my-dashboard {
     color: whitesmoke;
-    padding: 1rem 1.5em 0.5em 1.2em ;
+    font-size: 2em;
+    font-weight: 400;
+    margin: 1em 0 0.5em 1.4em;
+    
+}
+
+.darshboard-personal {
+    margin-bottom: 4em;
+    
 }
 
 .sidebar > div > ul > li {
-    padding: 0.5em 0;
-    font-size: 1.5em;
+    
+    font-size: 1.2rem;
+    
     color: whitesmoke;
+    border-bottom: hsl(317 100% 54%) 2px solid;
+    padding-bottom: 0.5em;
+    margin-right: 0.5em;
+    margin-left: 0.5em; 
+
 }
 
 .sidebar > div > ul > li >img {
     width: 15%;
     margin-right: 0.5em;
+    margin-left: 0.5em;
+    position: relative;
+    top: 5px;
 }
 
 /* Content */
 
+.projects-title , .trending-title{
+    font-size: 1.5em;
+    margin: 1em 0.8em 0.5em;
+    color: whitesmoke
+}
 h4 {
     color: whitesmoke
 }
 
 .content {
     grid-area: content;
+
+    align-self: center;
     
-    align-self: start;
-    display: grid;
     grid-template-columns: 3fr 1fr;
+    display: grid;
+    grid-gap: 5px;
+
 }
 
 .card-container {
- 
+    border-radius: 5px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -258,13 +300,45 @@ h4 {
 
 .card {
     padding: 20px;
-    grid-gap: 15px;
+    
 }
 
+.sidebar > div > ul > li:hover {
+    background: #120320;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 2em;
+    border: none;
+    box-shadow:
+    0 0 2px #fff,
+    0 0 5px #fff,
+    0 0 7px #fff,
+    0 0 15px var(--clr-neon),
+    0 0 30px var(--clr-neon),
+    0 0 42px var(--clr-neon),
+    0 0 60px var(--clr-neon),
+    0 0 79px var(--clr-neon);
+}
 
+.trending {
+    color: white
+}
+
+.annoucements-title {
+    color: whitesmoke;
+    font-size: 1.5em;
+    margin: 1em 0.8em 0.5em;
+}
+
+.trending-container {
+    background-color: #120320;
+}
+
+.annoucements-title, .trending-title, .projects-title {
+    text-shadow: 2px 2px #120320;
+}
 
 /* Additional */
-
 
 
 input:focus {
@@ -281,6 +355,14 @@ input:focus {
       0 0 79px var(--clr-neon);
 
       animation: pulsate 0.11s ease-in-out infinite alternate; 
+}
+
+.search-bar > input, select, textarea {
+    color: black;
+}
+
+textarea:focus, input:focus {
+    color: black;
 }
 
 
