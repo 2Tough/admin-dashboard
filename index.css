@@ -75,7 +75,7 @@ p, h2, .sidebar-right-title {
 }
 
 .profilePic {
-    border-radius: 30%;
+    border-radius: 10%;
 }
 
 
@@ -475,14 +475,6 @@ textarea:focus, input:focus {
   }
   
 
-
-
-
-  @keyframes border-pulsate {
-    0%   { border-color: var(--clr-neon); }
-    50%  { border-color: rgba(0, 255, 255, 0); }
-    100% { border-color: var(--clr-neon); }
-}
 
 /* Media */
 
