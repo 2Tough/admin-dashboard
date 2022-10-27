@@ -470,3 +470,19 @@ textarea:focus, input:focus {
     50%  { border-color: rgba(0, 255, 255, 0); }
     100% { border-color: var(--clr-neon); }
 }
+
+/* Media */
+
+@media (min-width: 900px) {
+    .container {
+        margin-left: 10em;
+        margin-right: 10em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        margin-left: 15em;
+        margin-right: 15em;
+    }
+}
